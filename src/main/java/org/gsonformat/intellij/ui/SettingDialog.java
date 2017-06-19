@@ -41,6 +41,7 @@ public class SettingDialog extends JFrame {
     private JRadioButton autoValueRadioButton;
     private JCheckBox splitGenerateMode;
     private JRadioButton lombokRB;
+    private JRadioButton jackLombokRadioButton;
     private String annotaionStr;
 
     public SettingDialog(Project project) {
@@ -250,6 +251,28 @@ public class SettingDialog extends JFrame {
                 array1Button.setEnabled(false);
             }
         });
+        jackLombokRadioButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                if (jackLombokRadioButton.isSelected()) {
+                    annotationFT.setText(Constant.jackLombokAnnotation);
+                }
+                annotationFT.setEnabled(false);
+                objectFromDataCB.setEnabled(false);
+                objectFromData1CB.setEnabled(false);
+                arrayFromDataCB.setEnabled(false);
+                arrayFromData1CB.setEnabled(false);
+                annotationFT.setEnabled(false);
+                objectFromDataCB.setSelected(false);
+                objectFromData1CB.setSelected(false);
+                arrayFromDataCB.setSelected(false);
+                arrayFromData1CB.setSelected(false);
+                objectButton.setEnabled(false);
+                object1Button.setEnabled(false);
+                arrayButton.setEnabled(false);
+                array1Button.setEnabled(false);
+            }
+        });
         autoValueRadioButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -275,6 +298,9 @@ public class SettingDialog extends JFrame {
             annotationFT.setEnabled(false);
         } else if (annotaionStr.equals(Constant.autoValueAnnotation)) {
             autoValueRadioButton.setSelected(true);
+            annotationFT.setEnabled(false);
+        } else if (annotaionStr.equals(Constant.jackLombokAnnotation)) {
+            jackLombokRadioButton.setSelected(true);
             annotationFT.setEnabled(false);
         } else {
             otherRB.setSelected(true);

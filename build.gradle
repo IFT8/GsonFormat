@@ -24,7 +24,7 @@ sourceSets {
 }
 intellij {
     version 'IC-2016.2.5'
-    pluginName 'GsonFormat'
+    pluginName 'JsonGenerator'
     updateSinceUntilBuild false
 
 //    publish {

@@ -2,6 +2,7 @@ package org.gsonformat.intellij.entity;
 
 import org.apache.http.util.TextUtils;
 import org.gsonformat.intellij.common.CheckUtil;
+import org.gsonformat.intellij.util.JavaBeanUtils;
 import org.jdesktop.swingx.ux.CellProvider;
 import org.jdesktop.swingx.ux.Selector;
 import org.json.JSONObject;
@@ -39,7 +40,8 @@ public class FieldEntity implements Selector, CellProvider {
     }
 
     public String getGenerateFieldName() {
-        return CheckUtil.getInstant().handleArg(fieldName);
+        String fieldName = CheckUtil.getInstant().handleArg(this.fieldName);
+        return JavaBeanUtils.getCamelCaseString(fieldName, false);
     }
 
     public void setFieldName(String fieldName) {

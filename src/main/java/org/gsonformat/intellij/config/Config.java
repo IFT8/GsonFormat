@@ -80,7 +80,7 @@ public class Config {
             config.setObjectFromDataStr1(PropertiesComponent.getInstance().getValue("objectFromDataStr1", Constant.objectFromObject1));
             config.setArrayFromDataStr(PropertiesComponent.getInstance().getValue("arrayFromDataStr", Constant.arrayFromData));
             config.setArrayFromData1Str(PropertiesComponent.getInstance().getValue("arrayFromData1Str", Constant.arrayFromData1));
-            config.setAnnotationStr(PropertiesComponent.getInstance().getValue("annotationStr", Constant.gsonAnnotation));
+            config.setAnnotationStr(PropertiesComponent.getInstance().getValue("annotationStr", Constant.jackLombokAnnotation));
             config.setEntityPackName(PropertiesComponent.getInstance().getValue("entityPackName"));
             config.setFiledNamePreFixStr(PropertiesComponent.getInstance().getValue("filedNamePreFixStr"));
             config.setErrorCount(PropertiesComponent.getInstance().getOrInitInt("errorCount", 0));
@@ -130,6 +130,9 @@ public class Config {
         }
         if (annotationStr.equals(Constant.loganSquareAnnotation)) {
             return Constant.loganSquareFullNameAnnotation;
+        }
+        if (annotationStr.equals(Constant.jackLombokAnnotation)) {
+            return Constant.jackFullNameAnnotation;
         }
         return annotationStr.replaceAll("\\(", "(").replaceAll("\\)", ")").replaceAll("\\s\\*", "");
     }

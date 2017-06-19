@@ -40,7 +40,7 @@ public class JsonDialog extends JFrame implements ConvertBridge.Operator {
         this.file = file;
         this.project = project;
         setContentPane(contentPane2);
-        setTitle("GsonFormat");
+        setTitle("JsonGenerator");
         getRootPane().setDefaultButton(okButton);
         this.setAlwaysOnTop(true);
         initGeneratePanel(file);
@@ -217,7 +217,7 @@ public class JsonDialog extends JFrame implements ConvertBridge.Operator {
     public void openSettingDialog() {
 
         SettingDialog settingDialog = new SettingDialog(project);
-        settingDialog.setSize(800, 720);
+        settingDialog.setSize(900, 720);
         settingDialog.setLocationRelativeTo(null);
 //        settingDialog.setResizable(false);
         settingDialog.setVisible(true);

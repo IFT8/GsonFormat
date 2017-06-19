@@ -31,6 +31,7 @@ public abstract class Processor {
         sProcessorMap.put(ConvertLibrary.LoganSquare, new LoganSquareProcessor());
         sProcessorMap.put(ConvertLibrary.Other, new OtherProcessor());
         sProcessorMap.put(ConvertLibrary.Lombok, new LombokProcessor());
+        sProcessorMap.put(ConvertLibrary.JackLombok, new JackLombokProcessor());
     }
 
 
@@ -212,7 +213,6 @@ public abstract class Processor {
             }
 
             if (generateClass != null) {
-
                 for (ClassEntity innerClass : classEntity.getInnerClasss()) {
                     generateClass(factory, innerClass, generateClass, visitor);
                 }
