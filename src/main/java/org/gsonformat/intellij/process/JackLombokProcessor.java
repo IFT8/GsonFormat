@@ -94,8 +94,7 @@ public class JackLombokProcessor extends Processor {
             fieldEntity.getTargetClass().setGenerate(true);
         }
 
-
-        if (!filedName.equals(fieldEntity.getKey()) || Config.getInstant().isUseSerializedName()) {
+        if (!filedName.equals(fieldEntity.getKey()) && Config.getInstant().isUseSerializedName()) {
             fieldSb.append(Config.getInstant().geFullNameAnnotation().replaceAll("\\{filed\\}", fieldEntity.getKey()));
         }
 

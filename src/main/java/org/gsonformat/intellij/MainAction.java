@@ -52,5 +52,4 @@ public class MainAction extends BaseGenerateAction {
         jsonD.setVisible(true);
 
     }
-
 }
