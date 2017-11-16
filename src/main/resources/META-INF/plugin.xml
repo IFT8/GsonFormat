@@ -7,7 +7,6 @@
   <ul>
   <li>New: Lombok and Jackson</li>
   <li>New: remove generateLuckyFieldName (runAgain)</li>
-  <li>New: remove checkSimpleType</li>
   </ul>
   </p>
 
