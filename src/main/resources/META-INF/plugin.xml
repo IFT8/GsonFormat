@@ -21,6 +21,13 @@
   <ul>
   <li>fix several bug </li>
   <li>fix unlock setting window size </li>
+  </ul>
+  1.6.0
+  <ul>
+  <li>New: Lombok and Jackson</li>
+  <li>New: remove generateLuckyFieldName (runAgain)</li>
+  <li>New: remove checkSimpleType</li>
+  </ul>
   </p>
 ]]></change-notes>
     <actions>

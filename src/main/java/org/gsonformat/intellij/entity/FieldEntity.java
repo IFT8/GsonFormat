@@ -93,12 +93,7 @@ public class FieldEntity implements Selector, CellProvider {
     }
 
     public void checkAndSetType(String text) {
-        if (type != null && CheckUtil.getInstant().checkSimpleType(type.trim())) {
-            //基本类型
-            if (CheckUtil.getInstant().checkSimpleType(text.trim())) {
-                this.type = text.trim();
-            }
-        } else {
+        if (type == null || !CheckUtil.getInstant().checkSimpleType(type.trim())) {
             //实体类:
             if (targetClass != null && !targetClass.isLock()) {
                 if (!TextUtils.isEmpty(text)) {
@@ -106,6 +101,13 @@ public class FieldEntity implements Selector, CellProvider {
                 }
             }
         }
+//        else {
+            //基本类型
+            //不用基本类型
+//            if (CheckUtil.getInstant().checkSimpleType(text.trim())) {
+//                this.type = text.trim();
+//            }
+//        }
     }
 
     public String getKey() {
