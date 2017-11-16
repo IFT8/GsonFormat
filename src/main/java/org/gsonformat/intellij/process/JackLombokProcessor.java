@@ -6,7 +6,6 @@ import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiElementFactory;
 import com.intellij.psi.PsiModifierList;
 import org.apache.http.util.TextUtils;
-import org.gsonformat.intellij.common.FieldHelper;
 import org.gsonformat.intellij.common.Try;
 import org.gsonformat.intellij.config.Config;
 import org.gsonformat.intellij.config.Constant;
@@ -58,7 +57,7 @@ public class JackLombokProcessor extends Processor {
 
                 @Override
                 public void runAgain() {
-                    fieldEntity.setFieldName(FieldHelper.generateLuckyFieldName(fieldEntity.getFieldName()));
+//                    fieldEntity.setFieldName(FieldHelper.generateLuckyFieldName(fieldEntity.getFieldName()));
                     cls.add(factory.createFieldFromText(generateJackLombokFieldText(classEntity, fieldEntity, Constant.FIXME), cls));
                 }
 
