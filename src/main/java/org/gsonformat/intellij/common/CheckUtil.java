@@ -99,7 +99,6 @@ public class CheckUtil {
         declareFieldNameList.clear();
     }
 
-
     public boolean containsDeclareClassName(String name) {
         return declareClassNameList.contains(name);
     }
@@ -141,7 +140,7 @@ public class CheckUtil {
             return Constant.DEFAULT_PREFIX + arg;
         } else {
             if (CheckUtil.getInstant().checkKeyWord(arg)) {
-                return arg + "X";
+                return arg + "_2";
             }
             return arg;
         }

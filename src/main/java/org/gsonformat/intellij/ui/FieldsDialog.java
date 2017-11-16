@@ -192,5 +192,4 @@ public class FieldsDialog extends JFrame {
         }
 
     }
-
 }

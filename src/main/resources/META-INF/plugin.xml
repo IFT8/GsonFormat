@@ -2,26 +2,23 @@
     <name>JsonGenerator</name>
     <description><![CDATA[
 <html>quickly to convert a JSON string to an InnerClassEntity class ..<br>
+
+  <p>
+  <ul>
+  <li>New: Lombok and Jackson</li>
+  <li>New: remove generateLuckyFieldName (runAgain)</li>
+  <li>New: remove checkSimpleType</li>
+  </ul>
+  </p>
+
 <a href="https://github.com/IFT8/JsonFormat"> openSource</a>
       </html>
       ]]>
     </description>
-    <version>1.5.0</version>
-    <vendor email="wyh405003836@126.com">zzz40500</vendor>
+    <version>1.6.0</version>
     <idea-version since-build="107.121"/>
     <change-notes><![CDATA[
   <p>
-  1.4.0
-  <ul>
-  <li>New: Support for autovalue</li>
-  <li>New: Support for lombok</li>
-  <li>New: Support for split generate class</li>
-  </ul>
-  1.5.0
-  <ul>
-  <li>fix several bug </li>
-  <li>fix unlock setting window size </li>
-  </ul>
   1.6.0
   <ul>
   <li>New: Lombok and Jackson</li>
